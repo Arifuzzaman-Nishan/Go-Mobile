@@ -28,9 +28,9 @@ const App = () => {
           <Route path='/home'>
             <Home></Home>
           </Route>
-          <Route path='/admin'>
+          <PrivateRoute path='/admin'>
             <Admin></Admin>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path='/checkOut/:productKey'>
             <CheckOut></CheckOut>
           </PrivateRoute>

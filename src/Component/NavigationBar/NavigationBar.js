@@ -1,10 +1,16 @@
-  
-import React from 'react';
-import { Button, Container, Nav, Navbar} from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
+import React, { useContext } from 'react';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
+import { userContext } from '../../App';
 
 
 const NavigationBar = () => {
+    const history = useHistory();
+
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
+    const { email, photoURL } = loggedInUser;
+    console.log(loggedInUser);
     return (
         <Container>
             <Navbar bg="light" expand="lg">
@@ -16,7 +22,19 @@ const NavigationBar = () => {
                         <Link className='mr-5 mb-3' to='/orders'>Orders</Link>
                         <Link className='mr-5 mb-3' to='/admin'>Admin</Link>
                         <Link className='mr-5 mb-3' to='/deals'>Deals</Link>
-                        <Button variant="danger">Login</Button>
+
+                        {
+                            email ?
+                                <>
+                                    <img className="mr-5"
+                                        style={{ width: "3rem", borderRadius: "50%"}}
+                                        src={photoURL} alt=""
+                                    />
+                                    <Button className="" onClick={() => setLoggedInUser({})} variant="danger">SignOut</Button>
+                                </>
+                                :
+                                <Button onClick={() => history.push('/login')} variant="danger">LogIn</Button>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

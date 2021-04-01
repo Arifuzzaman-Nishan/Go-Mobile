@@ -41,7 +41,7 @@ const Home = () => {
                     :
                     <>
                         <NavigationBar></NavigationBar>
-                        <Row>
+                        <Row className="mt-5">
                             {
                                 mobilesData.map(mobileData => <ShowHomeDetails key={mobileData._id} mobileData={mobileData}></ShowHomeDetails>)
                             }
