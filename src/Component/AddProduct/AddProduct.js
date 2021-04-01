@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
+import fakeData from '../../fakeData/fakeData.json';
 
 
 const AddProduct = () => {
