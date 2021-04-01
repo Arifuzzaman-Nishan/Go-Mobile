@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
-import data from '../../fakeData/fakeData.json'
 
 
 const AddProduct = () => {
@@ -12,8 +11,8 @@ const AddProduct = () => {
 
     const onSubmit = data => {
         const newMobileData = {
-            productName: data.productName,
-            addPrice: data.addPrice,
+            name: data.productName,
+            price: data.addPrice,
             color: data.color,
             image: imageURL
         }

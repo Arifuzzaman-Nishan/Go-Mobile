@@ -1,7 +1,14 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { useHistory } from 'react-router';
 
-const ShowHomeDetails = ({ mobileData: { name, price, image } }) => {
+const ShowHomeDetails = ({ mobileData: {_id, name, price, image } }) => {
+
+    const history = useHistory();
+    const handleCheckOut = (id)=>{
+       history.push(`/checkOut/${id}`)
+    }
+
     return (
         <Col md={4} className='mb-5'>
             <Card className='p-3' style={{ width: '18rem', height: '400px', cursor: "pointer" }}>
@@ -11,7 +18,7 @@ const ShowHomeDetails = ({ mobileData: { name, price, image } }) => {
                         <Card.Title>{name}</Card.Title>
                         <div style={{ width: '13rem' }} className='d-flex'>
                             <h4>${price}</h4>
-                            <Button className='ml-auto' variant="danger">Buy Now</Button>
+                            <Button onClick={() => handleCheckOut(_id)} className='ml-auto' variant="danger">Buy Now</Button>
                         </div>
                     </div>
                 </Card.Body>

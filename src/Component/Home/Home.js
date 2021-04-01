@@ -8,8 +8,15 @@ const Home = () => {
     const [mobilesData, setMobilesData] = useState([]);
 
     useEffect(() => {
-        setMobilesData(data)
-    }, [])
+        fetch('http://localhost:5000/mobileInfo')
+        .then(res => res.json())
+        .then(data => setMobilesData(data))
+    },[])
+    console.log(mobilesData);
+
+    // useEffect(() => {
+    //     setMobilesData(data)
+    // }, [])
 
     // console.log(mobilesData)
     return (
@@ -17,7 +24,7 @@ const Home = () => {
             <NavigationBar></NavigationBar>
             <Row>
                 {
-                    mobilesData.map(mobileData => <ShowHomeDetails mobileData={mobileData}></ShowHomeDetails>)
+                    mobilesData.map(mobileData => <ShowHomeDetails key={mobileData._id} mobileData={mobileData}></ShowHomeDetails>)
                 }
             </Row>
         </Container>
