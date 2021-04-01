@@ -30,7 +30,7 @@ const App = () => {
           <Route path='/admin'>
             <Admin></Admin>
           </Route>
-          <PrivateRoute path='/checkOut/:id'>
+          <PrivateRoute path='/checkOut/:productKey'>
               <CheckOut></CheckOut>
           </PrivateRoute>
           <Route path='/login'>
