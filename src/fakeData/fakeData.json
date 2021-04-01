@@ -1,57 +1,71 @@
 [{
     "name": "I phone 11 proMax",
-    "price": 6.75,
-    "image": "https://i.ibb.co/HHGWMw0/Apple-i-Phone-11-Pro-Max-Official-images.png"
+    "price": 999,
+    "image": "https://i.ibb.co/HHGWMw0/Apple-i-Phone-11-Pro-Max-Official-images.png",
+    "color": "Space Gray"
   }, {
-    "name": "Minette",
-    "price": 8.24,
-    "image": "https://i.ibb.co/hmk92KF/apple-iphone-x-new-1.jpg"
+    "name": "I phone x",
+    "price": 	999,
+    "image": "https://i.ibb.co/hmk92KF/apple-iphone-x-new-1.jpg",
+    "color": "Space Gray"
   }, {
-    "name": "Taddeusz",
-    "price": 3.68,
-    "image": "https://i.ibb.co/4SmLPrR/asus-rog-phone1.jpg"
+    "name": "Asus rog phone",
+    "price": 749,
+    "image": "https://i.ibb.co/4SmLPrR/asus-rog-phone1.jpg",
+    "color": "Black"
   }, {
-    "name": "Serena",
-    "price": 2.13,
-    "image": "https://i.ibb.co/txX4W8C/galaxy-A11.jpg"
+    "name": "Galaxy A11",
+    "price": 179,
+    "image": "https://i.ibb.co/txX4W8C/galaxy-A11.jpg",
+    "color": "Blue"
   }, {
-    "name": "Ulrika",
-    "price": 3.17,
-    "image": "https://i.ibb.co/wh2Y5j4/galaxy-A50.jpg"
+    "name": "Galaxy A50",
+    "price": 299,
+    "image": "https://i.ibb.co/wh2Y5j4/galaxy-A50.jpg",
+    "color": "white"
   }, {
-    "name": "Ferne",
-    "price": 0.01,
-    "image": "https://i.ibb.co/T4nRt5m/galaxy-S21.png"
+    "name": "Galaxy S21",
+    "price": 137999,
+    "image": "https://i.ibb.co/T4nRt5m/galaxy-S21.png",
+    "color": "Phantom Brown"
   }, {
-    "name": "Annabell",
-    "price": 2.45,
-    "image": "https://i.ibb.co/VtsgvQj/oneplus7pro.jpg"
+    "name": "one plus7 pro",
+    "price": 495.69,
+    "image": "https://i.ibb.co/VtsgvQj/oneplus7pro.jpg",
+    "color": "black"
   }, {
-    "name": "Nan",
-    "price": 3.58,
-    "image": "https://i.ibb.co/RDNpp17/Oneplus-8-Pro-ultimate-blue.jpg"
+    "name": "one plus8 pro",
+    "price": 500,
+    "image": "https://i.ibb.co/RDNpp17/Oneplus-8-Pro-ultimate-blue.jpg",
+    "color": "black"
   }, {
-    "name": "Blinnie",
-    "price": 8.81,
-    "image": "https://i.ibb.co/wK0dZpy/oppoA5.jpg"
+    "name": "OppoA5",
+    "price": 333,
+    "image": "https://i.ibb.co/wK0dZpy/oppoA5.jpg",
+    "color":"Diamond Blue"
   }, {
-    "name": "Berri",
-    "price": 3.05,
-    "image": "https://i.ibb.co/BZYGCbf/realme7pro.jpg"
+    "name": "Realme7 pro",
+    "price": 210,
+    "image": "https://i.ibb.co/BZYGCbf/realme7pro.jpg",
+    "color":"Blue"
   }, {
-    "name": "Adelle",
-    "price": 3.88,
-    "image": "https://i.ibb.co/m85SYHw/realmenarzo.png"
+    "name": "Realme Narzo",
+    "price": 199,
+    "image": "https://i.ibb.co/m85SYHw/realmenarzo.png",
+    "color":"Black"
   }, {
-    "name": "Adrien",
-    "price": 4.13,
-    "image": "https://i.ibb.co/qMCbyD8/vivoY12.jpg"
+    "name": "VivoY12",
+    "price": 120,
+    "image": "https://i.ibb.co/qMCbyD8/vivoY12.jpg",
+    "color":"Blue"
   }, {
-    "name": "Gertrude",
-    "price": 5.68,
-    "image": "https://i.ibb.co/94dh6nY/xaomi-redmi-note-9-S.jpg"
+    "name": "redmi note-9-s",
+    "price": 130,
+    "image": "https://i.ibb.co/94dh6nY/xaomi-redmi-note-9-S.jpg",
+    "color":"grey"
   }, {
-    "name": "Goldie",
-    "price": 2.61,
-    "image": "https://i.ibb.co/0FwShXN/Xiaomi-Redmi-9-C-new-orange.jpg"
+    "name": "Redmi 9-C",
+    "price": 150,
+    "image": "https://i.ibb.co/0FwShXN/Xiaomi-Redmi-9-C-new-orange.jpg",
+    "color":"Black"
   }]
