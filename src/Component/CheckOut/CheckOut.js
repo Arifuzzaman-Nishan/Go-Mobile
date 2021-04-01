@@ -1,10 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button, Container, Table } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { userContext } from '../../App';
 import NavigationBar from '../NavigationBar/NavigationBar';
 
 const CheckOut = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { productKey } = useParams();
+
+    const handleCheckOut = () => {
+        const newOrder = {
+            email: loggedInUser.email,
+            image: product.image,
+            productName: product.name,
+            quantity: product.quantity,
+            price: product.price,
+            date: (new Date().toDateString('dd/MM/yyyy'))
+        }
+
+        fetch("http://localhost:5000/order", {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newOrder)
+        })
+            .then(result => {
+                if (result) {
+                    alert("order added");
+                }
+            })
+    }
+
+
+
+
+    // console.log(order);
+
     console.log(productKey);
     const [product, setProduct] = useState({});
 
@@ -14,7 +46,7 @@ const CheckOut = () => {
             .then(data => setProduct(data))
     }, [productKey])
 
-    console.log(product);
+    // console.log(product);
     const { name, quantity, price } = product;
     return (
         <Container className="">
@@ -42,7 +74,7 @@ const CheckOut = () => {
                 </tbody>
             </Table>
             <div className='d-flex justify-content-end'>
-                <Button size='lg' variant='danger'>CheckOut</Button>
+                <Button onClick={handleCheckOut} size='lg' variant='danger'>CheckOut</Button>
             </div>
         </Container>
     );

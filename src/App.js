@@ -15,13 +15,14 @@ import AddProduct from './Component/AddProduct/AddProduct';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import CheckOut from './Component/CheckOut/CheckOut';
 import Login from './Component/Login/Login';
+import Orders from './Component/Orders/Orders';
 
 export const userContext = createContext();
 
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState({});
   return (
-    <userContext.Provider value={[loggedInUser,setLoggedInUser]}>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route path='/home'>
@@ -31,10 +32,13 @@ const App = () => {
             <Admin></Admin>
           </Route>
           <PrivateRoute path='/checkOut/:productKey'>
-              <CheckOut></CheckOut>
+            <CheckOut></CheckOut>
+          </PrivateRoute>
+          <PrivateRoute path='/orders'>
+            <Orders></Orders>
           </PrivateRoute>
           <Route path='/login'>
-              <Login></Login>
+            <Login></Login>
           </Route>
           <Route exact path='/'>
             <Home></Home>
