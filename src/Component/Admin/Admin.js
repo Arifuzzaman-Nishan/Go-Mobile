@@ -9,6 +9,7 @@ import AddProduct from '../AddProduct/AddProduct';
 import NoMatch from '../NoMatch/NoMatch';
 import { Nav, Navbar } from 'react-bootstrap';
 import { Link, useRouteMatch } from 'react-router-dom';
+import ManageProduct from '../ManageProduct/ManageProduct';
 
 
 const Admin = () => {
@@ -22,7 +23,7 @@ const Admin = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>
                         <Link className='mr-5 mb-3' to='/home'>Home</Link>
-                        <Link className='mr-5 mb-3' to='/manageProduct'>Manage Product</Link>
+                        <Link className='mr-5 mb-3' to={`${url}/manageProduct`}>Manage Product</Link>
                         <Link className='mr-5 mb-3' to={`${url}/addProduct`}>Add Product</Link>
                         <Link className='mr-5 mb-3' to='/editProduct'>Edit Product</Link>
                     </Nav>
@@ -32,6 +33,9 @@ const Admin = () => {
             <Switch>
                 <Route path={`${path}/addProduct`}>
                     <AddProduct></AddProduct>
+                </Route>
+                <Route path={`${path}/manageProduct`}>
+                    <ManageProduct></ManageProduct>
                 </Route>
                 <Route exact path={path}>
                     <h2 className="text text-danger text-center">Welcome to admin panel</h2>
