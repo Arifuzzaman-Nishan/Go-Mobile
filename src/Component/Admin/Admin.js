@@ -1,32 +1,46 @@
 import React from 'react';
-import AdminNavBar from '../AdminNavBar/AdminNavBar';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
 } from "react-router-dom";
-import Home from '../Home/Home';
+
 import AddProduct from '../AddProduct/AddProduct';
 import NoMatch from '../NoMatch/NoMatch';
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link, useRouteMatch } from 'react-router-dom';
+
 
 const Admin = () => {
+    const { path, url } = useRouteMatch();
+    // console.log(path,url);
     return (
         <div>
 
-            <Route path='/home'>
-                <Home></Home>
-            </Route>
-            <Route path='/addProduct'>
-                <AdminNavBar></AdminNavBar>
-                <AddProduct></AddProduct>
-            </Route>
-            <Route path='*'>
-                <AdminNavBar></AdminNavBar>
-                <NoMatch></NoMatch>
-            </Route>
+            <Navbar bg="light" expand="lg">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav>
+                        <Link className='mr-5 mb-3' to='/home'>Home</Link>
+                        <Link className='mr-5 mb-3' to='/manageProduct'>Manage Product</Link>
+                        <Link className='mr-5 mb-3' to={`${url}/addProduct`}>Add Product</Link>
+                        <Link className='mr-5 mb-3' to='/editProduct'>Edit Product</Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
 
-            <h1>welcome to admin panel</h1>
+            <Switch>
+                <Route path={`${path}/addProduct`}>
+                    <AddProduct></AddProduct>
+                </Route>
+                <Route exact path={path}>
+                    <h2 className="text text-danger text-center">Welcome to admin panel</h2>
+                </Route>
+                <Route path='*'>
+                    <NoMatch></NoMatch>
+                </Route>
+            </Switch>
+
         </div>
     );
 };
