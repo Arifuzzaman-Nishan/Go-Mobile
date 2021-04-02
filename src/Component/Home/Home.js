@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ShowHomeDetails from '../ShowHomeDetails/ShowHomeDetails';
-import data from '../../fakeData/fakeData.json';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";

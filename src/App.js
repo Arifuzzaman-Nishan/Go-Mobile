@@ -5,13 +5,11 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 
 import NoMatch from './Component/NoMatch/NoMatch';
 import Admin from './Component/Admin/Admin';
-import AddProduct from './Component/AddProduct/AddProduct';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import CheckOut from './Component/CheckOut/CheckOut';
 import Login from './Component/Login/Login';
