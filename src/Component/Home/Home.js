@@ -10,6 +10,7 @@ const Home = () => {
     const [mobilesData, setMobilesData] = useState([]);
     const [spinner, setSpinner] = useState(true);
 
+    // get data from database
     useEffect(() => {
         fetch('https://fathomless-island-94500.herokuapp.com/mobileInfo')
             .then(res => res.json())
@@ -25,13 +26,14 @@ const Home = () => {
     return (
         <Container>
             {
+                // spinner for home page
+
                 spinner ? <Loader className="d-flex justify-content-center align-items-center"
                     style={{ height: '100vh' }}
                     type="Puff"
                     color="#00BFFF"
                     height={100}
                     width={100}
-                    // timeout={60000} //6 secs
                 />
                     :
                     <>

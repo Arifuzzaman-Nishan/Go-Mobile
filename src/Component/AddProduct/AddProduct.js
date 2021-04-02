@@ -13,12 +13,15 @@ const AddProduct = () => {
     const [spinner, setSpinner] = useState(false);
 
     const onSubmit = data => {
+
         const newMobileData = {
             name: data.productName,
             price: data.addPrice,
             color: data.color,
             image: imageURL
         }
+
+        // send data to the database 
 
         fetch('https://fathomless-island-94500.herokuapp.com/addNewMobileInfo', {
             method: 'POST',
@@ -34,6 +37,7 @@ const AddProduct = () => {
             })
     }
 
+    // for image upload
     const handleImageUpload = (event) => {
         setSpinner(true);
         const imageData = new FormData();
@@ -53,12 +57,13 @@ const AddProduct = () => {
     return (
             <Container className="mt-5">
                 <div style={{ display: spinner ? "block" : "none" }}>
+
+                    {/* spinner for image upload */}
                     <Loader className="d-flex justify-content-center align-items-center"
                         type="ThreeDots"
                         color="#00BFFF"
                         height={100}
                         width={100}
-                    // timeout={60000} //6 secs
                     />
                     <h1 className="text text-white text-center">wait image is uploading....</h1>
                 </div>
@@ -80,6 +85,8 @@ const AddProduct = () => {
                                 <label className="text text-white" htmlFor="color">color</label>
                                 <input className="form-control" type="text" name="color" placeholder="Enter Color" ref={register({ required: true })} />
                             </Col>
+
+                            {/* for image upload */}
                             <Col md={5}>
                                 <div className="mt-5">
                                     <input className="text text-white" type="file" name="uploadPhoto" onChange={handleImageUpload} />

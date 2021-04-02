@@ -9,6 +9,7 @@ const CheckOut = () => {
     const { productKey } = useParams();
 
     const handleCheckOut = () => {
+        
         const newOrder = {
             email: loggedInUser.email,
             image: product.image,
@@ -18,6 +19,7 @@ const CheckOut = () => {
             date: (new Date().toDateString('dd/MM/yyyy'))
         }
 
+        // send order data to the database
         fetch("https://fathomless-island-94500.herokuapp.com/order", {
             method: 'POST',
             headers: {

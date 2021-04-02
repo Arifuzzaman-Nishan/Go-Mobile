@@ -21,6 +21,7 @@ const Admin = () => {
     const { displayName, email, photoURL } = loggedInUser;
     return (
         <Container>
+            {/* nav bar for admin */}
             <Navbar expand="lg">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +33,8 @@ const Admin = () => {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-
+            
+            {/* route for admin navbar */}
             <Switch>
                 <Route path={`${path}/addProduct`}>
                     <AddProduct></AddProduct>

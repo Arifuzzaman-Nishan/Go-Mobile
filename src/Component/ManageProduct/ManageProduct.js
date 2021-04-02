@@ -5,6 +5,7 @@ import ShowManageProduct from '../ShowManageProduct/ShowManageProduct';
 const ManageProduct = () => {
     const [mobileInfos, setMobileInfos] = useState([]);
 
+    // get mobileData from dataBase 
     useEffect(() => {
         fetch('https://fathomless-island-94500.herokuapp.com/mobileInfo')
             .then(res => res.json())
