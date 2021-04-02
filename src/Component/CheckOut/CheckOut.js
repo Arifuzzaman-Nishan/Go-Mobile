@@ -33,11 +33,6 @@ const CheckOut = () => {
     }
 
 
-
-
-    // console.log(order);
-
-    console.log(productKey);
     const [product, setProduct] = useState({});
 
     useEffect(() => {
@@ -46,7 +41,6 @@ const CheckOut = () => {
             .then(data => setProduct(data))
     }, [productKey])
 
-    // console.log(product);
     const { name, quantity, price } = product;
     return (
         <Container className="">

@@ -20,7 +20,6 @@ const AddProduct = () => {
             color: data.color,
             image: imageURL
         }
-        console.log(newMobileData);
 
         fetch('http://localhost:5000/addNewMobileInfo', {
             method: 'POST',
@@ -38,7 +37,6 @@ const AddProduct = () => {
 
     const handleImageUpload = (event) => {
         setSpinner(true);
-        console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', '5c02450f96069390321e19d6eca8acb7');
         imageData.append('image', event.target.files[0])
@@ -47,7 +45,6 @@ const AddProduct = () => {
             .then((response) => {
                 setSpinner(false);
                 setImageURL(response.data.data.display_url);
-                console.log(response.data.data.display_url);
             })
             .catch((error) => {
                 console.log(error);

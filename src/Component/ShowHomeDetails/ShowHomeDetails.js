@@ -10,8 +10,8 @@ const ShowHomeDetails = ({ mobileData: {_id, name, price, image } }) => {
     }
 
     return (
-        <Col md={4} className='mb-5'>
-            <Card className='p-3' style={{ width: '18rem', height: '400px', cursor: "pointer" }}>
+        <Col md={6} lg={4} className='mb-5'>
+            <Card className='p-3 mx-auto' style={{ width: '18rem', height: '400px', cursor: "pointer" }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body className='d-flex align-items-end'>
                     <div>

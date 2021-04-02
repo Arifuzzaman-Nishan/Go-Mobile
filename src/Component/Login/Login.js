@@ -32,9 +32,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setLoggedInUser(user);
-                console.log(user);
                 history.replace(from);
-                // ...
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;

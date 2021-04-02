@@ -11,11 +11,9 @@ const ManageProduct = () => {
             .then(data => setMobileInfos(data))
     }, [])
 
-    console.log(mobileInfos);
 
     return (
-        <Container className="bg-white">
-            <Table striped hover>
+            <Table striped hover className="bg-white">
                 <thead>
                     <tr>
                         <th>Product Name</th>
@@ -29,7 +27,6 @@ const ManageProduct = () => {
                     mobileInfos.map(mobileInfo => <ShowManageProduct mobileInfo={mobileInfo} key={mobileInfo._id}></ShowManageProduct>)
                 }
             </Table>
-        </Container>
     );
 };
 

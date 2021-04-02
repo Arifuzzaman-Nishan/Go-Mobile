@@ -11,7 +11,7 @@ const NavigationBar = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
     const { email, photoURL } = loggedInUser;
-    console.log(loggedInUser);
+
     return (
         <Navbar expand="lg">
             <Link className="go-mobile" to='/home'><h1 className='text text-white '>GoMobile</h1></Link>

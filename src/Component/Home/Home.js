@@ -21,13 +21,8 @@ const Home = () => {
                 }, 1000)
             })
     }, [])
-    console.log(mobilesData);
 
-    // useEffect(() => {
-    //     setMobilesData(data)
-    // }, [])
 
-    // console.log(mobilesData)
     return (
         <Container>
             {

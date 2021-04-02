@@ -14,17 +14,14 @@ const Orders = () => {
             .then(data => setOrders(data))
     }, [loggedInUser.email])
 
-    // const { productName, image, date, quantity, price } = order;
 
     return (
         <Container>
             <NavigationBar></NavigationBar>
             <h2 className="text text-white mt-4">Order List</h2>
-            <Row className="mt-5">
                 {
                     orders.map(order => <ShowOrders order={order} key={order.productName}></ShowOrders>)
                 }
-            </Row>
         </Container>
     );
 };

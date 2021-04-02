@@ -18,7 +18,6 @@ import EditProduct from '../EditProduct/EditProduct';
 const Admin = () => {
     const { path, url } = useRouteMatch();
     const [loggedInUser, setLoggedInUser] = useContext(userContext);
-    // console.log(path,url);
     const { displayName, email, photoURL } = loggedInUser;
     return (
         <Container>
