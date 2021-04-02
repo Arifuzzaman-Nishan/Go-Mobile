@@ -51,7 +51,7 @@ const CheckOut = () => {
     return (
         <Container className="">
             <NavigationBar></NavigationBar>
-            <Table className="mt-5" striped bordered hover variant="dark">
+            <Table className="mt-5" striped bordered hover variant="light">
                 <thead>
                     <tr>
                         <th>#</th>

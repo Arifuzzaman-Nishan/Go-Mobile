@@ -26,10 +26,12 @@ const NavigationBar = () => {
                     {
                         email ?
                             <div className="p-2">
+
                                 <img className="mr-5"
                                     style={{ width: "3rem", borderRadius: "50%" }}
                                     src={photoURL} alt=""
                                 />
+
                                 <Button className="" onClick={() => setLoggedInUser({})} variant="danger">SignOut</Button>
                             </div>
                             :

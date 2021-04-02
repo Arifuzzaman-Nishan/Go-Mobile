@@ -16,6 +16,7 @@ import PrivateRoute from './Component/PrivateRoute/PrivateRoute';
 import CheckOut from './Component/CheckOut/CheckOut';
 import Login from './Component/Login/Login';
 import Orders from './Component/Orders/Orders';
+import Deals from './Component/Deals/Deals';
 
 export const userContext = createContext();
 
@@ -39,6 +40,9 @@ const App = () => {
           </PrivateRoute>
           <Route path='/login'>
             <Login></Login>
+          </Route>
+          <Route path="/deals">
+            <Deals></Deals>
           </Route>
           <Route exact path='/'>
             <Home></Home>

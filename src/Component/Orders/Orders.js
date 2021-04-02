@@ -19,6 +19,7 @@ const Orders = () => {
     return (
         <Container>
             <NavigationBar></NavigationBar>
+            <h2 className="text text-white mt-4">Order List</h2>
             <Row className="mt-5">
                 {
                     orders.map(order => <ShowOrders order={order} key={order.productName}></ShowOrders>)
