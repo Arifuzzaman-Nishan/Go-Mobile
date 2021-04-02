@@ -6,7 +6,7 @@ const ManageProduct = () => {
     const [mobileInfos, setMobileInfos] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/mobileInfo')
+        fetch('https://fathomless-island-94500.herokuapp.com/mobileInfo')
             .then(res => res.json())
             .then(data => setMobileInfos(data))
     }, [])

@@ -18,7 +18,7 @@ const CheckOut = () => {
             date: (new Date().toDateString('dd/MM/yyyy'))
         }
 
-        fetch("http://localhost:5000/order", {
+        fetch("https://fathomless-island-94500.herokuapp.com/order", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -36,7 +36,7 @@ const CheckOut = () => {
     const [product, setProduct] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/product/' + productKey)
+        fetch('https://fathomless-island-94500.herokuapp.com/product/' + productKey)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [productKey])

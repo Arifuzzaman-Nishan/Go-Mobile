@@ -9,7 +9,7 @@ const ShowManageProduct = ({ mobileInfo: { _id, color, name, price } }) => {
 
     const [hide, setHide] = useState(true);
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://fathomless-island-94500.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

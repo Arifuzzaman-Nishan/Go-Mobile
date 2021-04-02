@@ -11,7 +11,7 @@ const Home = () => {
     const [spinner, setSpinner] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/mobileInfo')
+        fetch('https://fathomless-island-94500.herokuapp.com/mobileInfo')
             .then(res => res.json())
             .then(data => {
                 setTimeout(() => {

@@ -20,7 +20,7 @@ const AddProduct = () => {
             image: imageURL
         }
 
-        fetch('http://localhost:5000/addNewMobileInfo', {
+        fetch('https://fathomless-island-94500.herokuapp.com/addNewMobileInfo', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
