@@ -1,0 +1,8 @@
+.navi:hover{
+    background-color: gray;
+    border-radius: 8%;
+    text-decoration: none;
+}
+.go-mobile:hover{
+    text-decoration: none;
+}

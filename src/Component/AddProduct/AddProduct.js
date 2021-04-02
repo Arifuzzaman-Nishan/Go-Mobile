@@ -64,29 +64,29 @@ const AddProduct = () => {
                         width={100}
                     // timeout={60000} //6 secs
                     />
-                    <h1 className="text text-danger text-center">wait image is uploading....</h1>
+                    <h1 className="text text-white text-center">wait image is uploading....</h1>
                 </div>
                 <div style={{ display: spinner ? "none" : "block" }}>
                     <div>
-                        <h2>Add Product</h2>
+                        <h2 className="text text-white">Add Product</h2>
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <Row className="justify-content-around mt-5">
                             <Col md={5}>
-                                <label htmlFor="productName">Product Name</label>
+                                <label className="text text-white" htmlFor="productName">Product Name</label>
                                 <input className="form-control" type="text" name="productName" placeholder="Enter Name" ref={register({ required: true })} />
                             </Col>
                             <Col md={5}>
-                                <label htmlFor="addPrice">Add Price</label>
+                                <label className="text text-white" htmlFor="addPrice">Add Price</label>
                                 <input className="form-control" type="text" name="addPrice" placeholder="Enter Price" ref={register({ required: true })} />
                             </Col>
                             <Col md={5} className="mt-3">
-                                <label htmlFor="color">color</label>
+                                <label className="text text-white" htmlFor="color">color</label>
                                 <input className="form-control" type="text" name="color" placeholder="Enter Color" ref={register({ required: true })} />
                             </Col>
                             <Col md={5}>
                                 <div className="mt-5">
-                                    <input type="file" name="uploadPhoto" onChange={handleImageUpload} />
+                                    <input className="text text-white" type="file" name="uploadPhoto" onChange={handleImageUpload} />
                                 </div>
                             </Col>
                             <Col className="mt-5" md={5}>

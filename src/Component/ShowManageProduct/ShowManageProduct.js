@@ -3,7 +3,7 @@ import { Col, Table } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-// import { faCoffee } from '@fortawesome/free-brands-svg-icons'
+
 
 const ShowManageProduct = ({ mobileInfo: { _id, color, name, price } }) => {
 

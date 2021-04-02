@@ -14,7 +14,7 @@ const ManageProduct = () => {
     console.log(mobileInfos);
 
     return (
-        <Container>
+        <Container className="bg-white">
             <Table striped hover>
                 <thead>
                     <tr>

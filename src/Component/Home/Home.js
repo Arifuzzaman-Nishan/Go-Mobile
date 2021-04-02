@@ -5,6 +5,7 @@ import data from '../../fakeData/fakeData.json';
 import NavigationBar from '../NavigationBar/NavigationBar';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+import './Home.css';
 
 const Home = () => {
     const [mobilesData, setMobilesData] = useState([]);
